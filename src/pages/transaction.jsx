@@ -110,8 +110,6 @@ const Transaction = () => {
 };
 
 export default Transaction;
-
-// return (
 //   <div className="container">
 //     <div className="row">
 //       <form className="bg-white shadow rounded-3 p-4 row g-3">
