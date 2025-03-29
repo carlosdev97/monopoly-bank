@@ -1,15 +1,17 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Transaction from "./pages/transaction";
-import Login from "./components/login";
-import useUsuario from "./hooks/useUsuario";
-import Home from "./components/Home";
+import Home from "./pages/Home/Home";
+import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
+import Transaction from "./pages/Transaction/Transaction";
+
 function App() {
-  const usuario = useUsuario()
   return (
     <Router>
       <Routes>
-        <Route path="/" element={usuario ? <Home /> : <Login />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/transaction" element={<Transaction />} />
       </Routes>
     </Router>
